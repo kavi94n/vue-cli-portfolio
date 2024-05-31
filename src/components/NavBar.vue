@@ -1,24 +1,25 @@
 <template>
   
-  <app-bar class="">
-
-    <h1>kavirajh</h1>
-    /<fa :icon="['fab', 'youtube']" />/
-    <v-btn text @click="scroll('home')" class="text-blue">Home</v-btn>
-    <button text @click="scroll('about')" class="text-blue">About</button>
-    <button text @click="scroll('portfolio')" class="text-blue">Portfolio</button>
-    <button text @click="scroll('Projects')" class="text-blue">Projects</button>
-    <button text @click="scroll('contact')" class="text-blue">Contact</button>
-  </app-bar>
+  <div id="button" class=" flex justify-end">
+    <v-app-bar>
+    <button class="py-2 px-5 bg-blue-700 hover:bg-blue-800 m-2 bo rounded-md" >Home</button>
+    <button class="py-2 px-5 bg-blue-700 hover:bg-blue-800 m-2 bo rounded-md">About</button>
+    <button class="py-2 px-5 bg-blue-700 hover:bg-blue-800 m-2 bo rounded-md">Portfolio</button>
+    <button class="py-2 px-5 bg-blue-700 hover:bg-blue-800 m-2 bo rounded-md">Project</button>
+    <button class="py-2 px-5 bg-blue-700 hover:bg-blue-800 m-2 bo rounded-md">Contact</button>
+    </v-app-bar>
+  </div>
 
 </template>
 
 
 
 <script>
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import App from '@/App.vue';
+
 
 export default {
+  components: { App },
   methods: {
   scroll(refName) {
     const element = document.getElementById(refName);
@@ -30,7 +31,10 @@ export default {
 }
 
 </script>
-
 <style scoped>
+#button {
+  background-color: aquamarine;
+}
 
 </style>
+
